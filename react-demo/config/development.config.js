@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'static/[name].bundle.js',
     path: path.join(__dirname, '../build'),
-    publicPath: './'
+    // publicPath: './'
   },
   module: {
     rules: [
@@ -35,8 +35,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-        title: 'welcome',
-        template: './public/index.html'
+        title: 'welcome title',
+        template: path.join(__dirname, '../public/index.html')
     }),
   ]
 };
