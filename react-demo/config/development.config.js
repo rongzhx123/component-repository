@@ -11,12 +11,26 @@ module.exports = {
   entry: path.join(__dirname, '../src/index.js'),
   output: {
     filename: 'static/[name].bundle.js',
-    chunkFilename: 'static/chunk/[hash:6].chunk.js',
+    chunkFilename: 'static/chunk/[name].[hash:6].chunk.js',
     path: path.join(__dirname, '../build'),
     publicPath: './'
   },
   module: {
     rules: [
+      {
+        test:/\.(png|jpg|jpeg|gif)$/,
+        use:[
+            {
+                loader:"url-loader",
+                options:{
+                    limit:50000,   //表示低于50000字节（50K）的图片会以 base64编码
+                    outputPath:"image",
+                    name:'[name].[hash:5].[ext]',
+                    // pulbicPath:"./dist/asset/images"
+                }
+            }
+        ]
+      },
       {
         test: /\.(js|jsx)$/,
         use: [
@@ -43,16 +57,17 @@ module.exports = {
           'css-loader',
           'less-loader'
         ]
-      }
+      },
     ]
   },
   devServer: {
-    // 这个路径映射到打包后的build
+    // 内存打包后，文件放在这个位置，需要访问这个位置才能访问到文件
     publicPath: '/',
     hot: true,
     open: true,
     port: 3000,
     inline: true,
+    overlay: false,
   },
   plugins: [
     new CleanWebpackPlugin(),

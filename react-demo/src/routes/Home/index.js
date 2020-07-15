@@ -4,7 +4,9 @@ import './index.less';
 class Home extends Component {
   render () {
     return (
-      <div>首页</div>
+      <div>
+        <div className='img' />
+      </div>
     );
   }
 }
