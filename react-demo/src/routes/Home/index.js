@@ -6,7 +6,7 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <HelloWorld />
+        <HelloWorld text='test' />
         <div className='img' />
       </div>
     );
