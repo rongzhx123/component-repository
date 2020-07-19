@@ -17,3 +17,7 @@ import * as AllComponent from
 ## 遇到的问题
 
 1，```extract-text-webpack-plugin```不支持```webpack4```，需要用```extract-text-webpack-plugin@next```
+
+## .npmignore文件
+
+用户安装了包之后，如果有哪些文件不想让其看到，可以在这里注明。由于最终打包成```lib/main.js```，所以可将源码忽略掉

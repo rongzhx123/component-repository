@@ -1,8 +1,8 @@
 {
   "name": "rzx-hello-world",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "description": "",
-  "main": "./src/components/index.js",
+  "main": "./lib/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config ./config/webpack.development.js",

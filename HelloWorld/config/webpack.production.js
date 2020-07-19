@@ -6,7 +6,7 @@ module.exports = {
   entry: path.join(__dirname, '../src/components/index.js'),
   output: {
     path: path.join(__dirname, '../lib'),
-    filename: 'js/[name].[hash:6].bundle.js',
+    filename: 'js/main.js',
     chunkFilename: 'js/[name].[hash:6].chunk.js',
     libraryTarget: 'umd'
   },
