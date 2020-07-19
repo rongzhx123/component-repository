@@ -1,4 +1,5 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -54,4 +55,15 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    // new HtmlWebpackPlugin({
+    //     title: 'welcome title',
+    //     template: path.join(__dirname, '../public/index.html')
+    // }),
+    // new ExtractTextPlugin({
+		// 	filename: cssFilename,
+		// 	allChunks: true
+		// }),
+  ]
 };
