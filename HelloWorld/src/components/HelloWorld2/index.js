@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const HelloWorld = (props) => {
   const { text = '' } = props;
   return (
-    <div>{`Hello World! the text is ${text}`}</div>
+    <div>{`Hello World2! The text is ${text}`}</div>
   );
 };
 

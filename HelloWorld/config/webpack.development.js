@@ -38,7 +38,6 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/react', '@babel/preset-env'],
-              plugins: ["@babel/plugin-proposal-class-properties"]
             }
           }
         ],
@@ -66,7 +65,7 @@ module.exports = {
     publicPath: '/',
     hot: true,
     open: true,
-    port: 3000,
+    port: 3001,
     inline: true,
     overlay: false,
   },

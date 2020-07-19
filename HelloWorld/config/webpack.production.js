@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: path.join(__dirname, '../src/index.js'),
+  entry: path.join(__dirname, '../src/components/index.js'),
   output: {
     path: path.join(__dirname, '../lib'),
     filename: 'js/[name].[hash:6].bundle.js',
@@ -33,6 +33,7 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/react', '@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-class-properties']
             }
           }
         ],
