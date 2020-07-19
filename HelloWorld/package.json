@@ -1,6 +1,6 @@
 {
-  "name": "my-hello-world",
-  "version": "1.0.0",
+  "name": "rzx-hello-world",
+  "version": "1.0.1",
   "description": "",
   "main": "./src/index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "webpack --config ./config/webpack.config.js"
   },
   "keywords": [],
+  "repository": "https://github.com/rongzhx123/component-repository/HelloWorld",
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -16,6 +17,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "less-loader": "^6.2.0",
