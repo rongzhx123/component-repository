@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -72,10 +73,12 @@ module.exports = {
     hot: true,
     open: true,
     port: 3001,
-    inline: true,
     overlay: false,
+    quiet: true,
+    historyApiFallback: false
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
         // title: 'welcome title',
