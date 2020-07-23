@@ -8,12 +8,18 @@ const cssFilename = 'css/[name].css';
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, '../src/index.js'),
+  entry: {
+    common: require.resolve('./polyfills'),
+    main: path.join(__dirname, '../src/index.js'),
+  },
   output: {
     filename: 'static/[name].bundle.js',
     chunkFilename: 'static/chunk/[name].[hash:6].chunk.js',
     path: path.join(__dirname, '../build'),
     publicPath: './'
+  },
+  externals : {
+    'react': 'React',
   },
   module: {
     rules: [
@@ -72,8 +78,12 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-        title: 'welcome title',
-        template: path.join(__dirname, '../public/index.html')
+        // title: 'welcome title',
+        template: path.join(__dirname, '../public/index.html'),
+        inject: true,
+        chunksSortMode: function(a, b){
+          return 1;
+        },
     }),
     new ExtractTextPlugin({
 			filename: cssFilename,
