@@ -1,6 +1,6 @@
 {
   "name": "rzx-hello-world",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "./lib/js/main.js",
   "scripts": {

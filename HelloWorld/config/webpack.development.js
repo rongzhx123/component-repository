@@ -20,7 +20,7 @@ module.exports = {
     publicPath: './'
   },
   externals : {
-    'react': 'React',
+    // 'react': 'React',
   },
   module: {
     rules: [
