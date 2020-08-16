@@ -13,7 +13,7 @@ module.exports = {
     filename: 'static/[name].bundle.js',
     chunkFilename: 'static/chunk/[name].[hash:6].chunk.js',
     path: path.join(__dirname, '../build'),
-    publicPath: './'
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -67,8 +67,6 @@ module.exports = {
     hot: true,
     open: true,
     port: 3000,
-    inline: true,
-    overlay: false,
   },
   plugins: [
     new CleanWebpackPlugin(),
